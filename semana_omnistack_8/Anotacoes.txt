@@ -1,0 +1,98 @@
+Primeiro dia salvo no Windows
+
+BACKEND:
+
+- Uso do Yarn para inicializar projeto (package.json): yarn init -y
+- Instalação do Express: microframework para Node.js que ajuda a lidar com requisições e respostas para o servidor
+- Yarn e NPM instalam as dependências de cada dependência e de cada pacote
+
+- Resp API (métodos: GET, POST, PUT, DELETE)
+GET: buscar informação
+POST: criar/postar entidade
+PUT: editar (por padrão não possível diretamente pelo HTML)
+DELETE: deletar (por padrão não possível diretamente pelo HTML)
+
+- Comando: "node src/server.js" para rodar o servidor 
+
+- JSON (Javascript Object Notation) para substituir o XML
+
+- Instalar nodemon(usado para manter o servidor up sempre, aplicando atualizações automaticamente): yarn add nodemon -D (-D = dependência de desenvolvimento, usado só nessa fase)
+- Chave cripts dentro do package permitem usar comandos pelo yarn (yarn dev -> executa nodemon src/server.js)
+
+- Por padrão, o browser executa uma requisição GET no servidor, o POST só é enviado se existe algum formulário ou algo assim
+
+- Insomnia = https://insomnia.rest/ -> testar métodos da API (GET, POST, PUT, DELETE)
+
+- os dados de uma requisição do tipo POST são enviados no corpo da mensagem (nao na UR L)
+
+- MongoDB: bando de dados não relacional -> MongoDB Atlas, permite utilizar um bando de dados de até 500MB de graça
+Cluster é um servidor, pode-se criar, detro dele, vários banco de dados. {
+    Mongo Atlas
+    Mongo Compass
+}
+
+- Comando "yarn add mongoose" -> ODM: Ferramenta que facilita o trabalho com o BD usando sintaxe de Javascript
+
+- Arquitetura MVC (model, view, controller)
+
+- Pacote "Axios": faz requisições para APIs externas (comando: "yarn add axios")
+
+- Para ver a Database em tempo real usa-se o MongoDB Compass Comunity
+
+- Autenticação JWT -> usa tokens para autenticação com o uso de RESP APIs
+
+- Yarn add cors -> permite que a aplicação seja acessada por qualquer endereço (o React pode acessá-lo)
+
+- Protocolo WEBSOCKET para transmitir informações em tempo real entre back-end e front-end
+comando: "yarn add socket.io" -> adiciona um wrapper sobre a API de websocket padrão do Node
+
+FRONTEND:
+
+- Webpack e babel: pega o código (atualizado/recente) que o navegador não entende e transforma o código para que ele entenda
+
+- Alguns browsers ainda não entendem sintaxes mais complexas (como html dentro do Javascript)
+
+- yarn start = inicia o servidor React
+
+- Arquivo serviceWorker.js do React serve para construção de PWAs
+
+- Imagens no formatp SVG ficam boas em qualquer resolução de tela
+
+- Comando: "yarn add react-router-dom" -> biblioteca 
+
+- Comando: "yarn add axios"
+
+- Comando: "yarn add socket.io-client" -> socket.io client side
+
+MOBILE:
+- Comando: "npx react-native init <nome_projeto>
+Outra opção é instalar "global add react-native-cli" e simplesmente dar "react-native init", mas para isso é preciso configurar a variável "global" no Path do PC
+  Run instructions for Android:
+    • Have an Android emulator running (quickest way to get started), or a device connected.
+    • cd tindev && react-native run-android
+
+- Instalar emulador do Android: http://docs.rocketseat.dev
+
+- Abrir emulador e em seguida, dentro da pasta do projeto, executar: yarn react-native run-android
+
+- Instalar: "yarn add react-navigation react-native-gesture-handler react-native-reanimated" -> faz a parte de navegação básica/dependência do react-navigation (lida com gestos do usuário)/serve para usar transições com animações
+No Android, a bliblioteca gesture-handler precisa de uma configuração a mais:
+
+- Instalar axios: yarn add axios
+
+- adb reverse tcp:3333 tpc:3333 -> redireciona a rota de conexão do emulador para achar o 'localhost'
+
+- yarn add react-native-community/async-storage -> biblioteca para se ter um banco de dados chave-valor
+
+- Para trabalhar com as conexões: yarn add socket.io-client
+
+--------------------------------------------------------------------------------
+- TheVox
+
+- Ferramento de CI: Travis, Buddy (usado na Rocketseat), CodeCircle...
+Kubernetes
+
+-> Ter uma pessoa para tirar bugs
+-> Equipes de 4 pessoas
+-> Versionamento de código pelo GIT, pull request revisado por todos da equipe antes de commitar
+
